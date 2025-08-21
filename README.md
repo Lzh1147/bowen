@@ -1,4 +1,3 @@
-
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -492,7 +491,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <i class="bi bi-hospital"></i> 广州博文
+                <i class="bi bi-hospital"></i> 广州博文知识产权代理有限公司
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -546,7 +545,7 @@
                     <p>我们为医务人员提供医学专利申请、医学期刊出版、医学著作出版、课题立项、科普发表等咨询辅助服务。清楚当前各医学工作者所面临的困境和挑战，致力做最专业的医学科研发展平台，为广大医护人员提供优质的服务体验。</p>
                 </div>
                 <div class="col-lg-6 fade-in">
-                    <img src="https://picsum.photos/seed/medical-research/600/400.jpg" alt="医学科研" class="img-fluid rounded shadow">
+                    <img src="https://m.360buyimg.com/i/jfs/t1/325772/9/8707/431625/68a6e02fFa21c4945/25298d62622b6846.png" alt="医学科研" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
@@ -1032,21 +1031,21 @@
                         <i class="bi bi-geo-alt"></i>
                     </div>
                     <h5>公司地址</h5>
-                    <p>广州市番禺区东荟创新园</p>
+                    <p>广州市番禺区东荟创新园A309</p>
                 </div>
                 <div class="col-md-4 text-center fade-in">
                     <div class="advantage-icon mx-auto mb-3">
                         <i class="bi bi-telephone"></i>
                     </div>
                     <h5>联系电话</h5>
-                    <p>400-XXX-XXXX</p>
+                    <p>13422200133</p>
                 </div>
                 <div class="col-md-4 text-center fade-in">
                     <div class="advantage-icon mx-auto mb-3">
                         <i class="bi bi-envelope"></i>
                     </div>
                     <h5>电子邮箱</h5>
-                    <p>info@bowen-ip.com</p>
+                    <p>13422200133@163.com</p>
                 </div>
             </div>
         </div>
