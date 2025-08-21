@@ -233,46 +233,174 @@
         }
 
         .feature-list li::before {
-            content: '?';
+            content: '✓';
             position: absolute;
             left: 0;
             color: var(--accent-color);
             font-weight: bold;
         }
 
-        /* 统计图表 */
-        .chart-container {
+        /* IF趋势图表格样式 */
+        .if-trend-container {
             background: white;
             border-radius: 15px;
-            padding: 30px;
+            padding: 40px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            height: 400px;
-            position: relative;
+            margin-top: 30px;
         }
 
-        .bar {
-            position: absolute;
-            bottom: 50px;
-            width: 60px;
-            background: linear-gradient(to top, var(--primary-color), var(--accent-color));
-            border-radius: 5px 5px 0 0;
-            transition: all 0.3s ease;
-            cursor: pointer;
+        .if-trend-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-bottom: 10px;
         }
 
-        .bar:hover {
-            opacity: 0.8;
-            transform: scaleY(1.05);
+        .if-trend-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 30px;
         }
 
-        .bar-1 { left: 50px; height: 108px; }
-        .bar-2 { left: 130px; height: 128px; }
-        .bar-3 { left: 210px; height: 32px; }
-        .bar-4 { left: 290px; height: 24px; }
-        .bar-5 { left: 370px; height: 76px; }
-        .bar-6 { left: 450px; height: 96px; }
-        .bar-7 { left: 530px; height: 100px; }
-        .bar-8 { left: 610px; height: 112px; }
+        .if-trend-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .if-trend-table th {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: 600;
+            border: none;
+        }
+
+        .if-trend-table th:first-child {
+            border-top-left-radius: 10px;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .if-trend-table th:last-child {
+            border-top-right-radius: 10px;
+        }
+
+        .if-trend-table td {
+            padding: 12px 10px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .if-trend-table td:first-child {
+            text-align: left;
+            padding-left: 20px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .if-trend-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .if-trend-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .if-value {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+        }
+
+        .if-high {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .if-medium {
+            background-color: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .if-low {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+
+        .trend-arrow {
+            font-size: 12px;
+            margin-left: 3px;
+        }
+
+        .trend-up {
+            color: #2e7d32;
+        }
+
+        .trend-down {
+            color: #c62828;
+        }
+
+        .trend-stable {
+            color: #ef6c00;
+        }
+
+        .journal-category {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .category-q1 {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .category-q2 {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .category-q3 {
+            background-color: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .category-q4 {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+
+        .table-legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+        }
 
         /* 页脚 */
         footer {
@@ -317,17 +445,21 @@
             .hero-subtitle {
                 font-size: 1.2rem;
             }
-            .bar {
-                width: 40px;
+            .if-trend-table {
+                font-size: 12px;
             }
-            .bar-1 { left: 20px; }
-            .bar-2 { left: 70px; }
-            .bar-3 { left: 120px; }
-            .bar-4 { left: 170px; }
-            .bar-5 { left: 220px; }
-            .bar-6 { left: 270px; }
-            .bar-7 { left: 320px; }
-            .bar-8 { left: 370px; }
+            .if-trend-table th,
+            .if-trend-table td {
+                padding: 8px 5px;
+            }
+            .if-trend-table td:first-child {
+                padding-left: 10px;
+            }
+            .journal-category {
+                display: block;
+                margin-left: 0;
+                margin-top: 3px;
+            }
         }
 
         /* 动画效果 */
@@ -340,6 +472,18 @@
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* 表格动画 */
+        .table-row {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.5s ease;
+        }
+
+        .table-row.visible {
+            opacity: 1;
+            transform: translateX(0);
         }
     </style>
 </head>
@@ -526,21 +670,253 @@
                 </div>
             </div>
 
-            <!-- 统计图表 -->
+            <!-- SCI期刊IF趋势图表格 -->
             <div class="row mt-5">
                 <div class="col-12 fade-in">
-                    <h3 class="text-center mb-4">期刊稳定性评测数据</h3>
-                    <div class="chart-container">
-                        <div class="bar bar-1" title="2.7"></div>
-                        <div class="bar bar-2" title="3.2"></div>
-                        <div class="bar bar-3" title="0.8"></div>
-                        <div class="bar bar-4" title="0.6"></div>
-                        <div class="bar bar-5" title="1.9"></div>
-                        <div class="bar bar-6" title="2.4"></div>
-                        <div class="bar bar-7" title="2.5"></div>
-                        <div class="bar bar-8" title="2.8"></div>
-                        <div style="position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; color: #666;">
-                            投稿增长比、国人占比、影响因子变化、自引率等动态因素
+                    <div class="if-trend-container">
+                        <h3 class="if-trend-title">SCI期刊近年IF趋势图</h3>
+                        <p class="if-trend-subtitle">精选医学领域SCI期刊影响因子变化趋势分析（2019-2023）</p>
+                        
+                        <div class="table-responsive">
+                            <table class="if-trend-table">
+                                <thead>
+                                    <tr>
+                                        <th>期刊名称</th>
+                                        <th>2019 IF</th>
+                                        <th>2020 IF</th>
+                                        <th>2021 IF</th>
+                                        <th>2022 IF</th>
+                                        <th>2023 IF</th>
+                                        <th>趋势</th>
+                                        <th>分区</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-row">
+                                        <td>
+                                            Nature Medicine
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">53.44</span></td>
+                                        <td><span class="if-value if-high">67.54</span></td>
+                                        <td><span class="if-value if-high">87.24</span></td>
+                                        <td><span class="if-value if-high">82.90</span></td>
+                                        <td><span class="if-value if-high">58.70</span></td>
+                                        <td><span class="trend-arrow trend-down">↓</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            New England Journal of Medicine
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">74.69</span></td>
+                                        <td><span class="if-value if-high">91.25</span></td>
+                                        <td><span class="if-value if-high">176.08</span></td>
+                                        <td><span class="if-value if-high">158.50</span></td>
+                                        <td><span class="if-value if-high">96.20</span></td>
+                                        <td><span class="trend-arrow trend-down">↓</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            The Lancet
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">60.39</span></td>
+                                        <td><span class="if-value if-high">79.32</span></td>
+                                        <td><span class="if-value if-high">202.73</span></td>
+                                        <td><span class="if-value if-high">168.90</span></td>
+                                        <td><span class="if-value if-high">98.40</span></td>
+                                        <td><span class="trend-arrow trend-down">↓</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            JAMA
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">45.54</span></td>
+                                        <td><span class="if-value if-high">56.27</span></td>
+                                        <td><span class="if-value if-high">157.34</span></td>
+                                        <td><span class="if-value if-high">120.70</span></td>
+                                        <td><span class="if-value if-high">63.10</span></td>
+                                        <td><span class="trend-arrow trend-down">↓</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            BMJ
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">30.22</span></td>
+                                        <td><span class="if-value if-high">39.89</span></td>
+                                        <td><span class="if-value if-high">93.33</span></td>
+                                        <td><span class="if-value if-high">105.70</span></td>
+                                        <td><span class="if-value if-high">93.60</span></td>
+                                        <td><span class="trend-arrow trend-down">↓</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            Cell
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">36.22</span></td>
+                                        <td><span class="if-value if-high">41.58</span></td>
+                                        <td><span class="if-value if-high">66.85</span></td>
+                                        <td><span class="if-value if-high">59.90</span></td>
+                                        <td><span class="if-value if-high">45.50</span></td>
+                                        <td><span class="trend-arrow trend-down">↓</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            Cancer Cell
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">26.02</span></td>
+                                        <td><span class="if-value if-high">31.74</span></td>
+                                        <td><span class="if-value if-high">50.17</span></td>
+                                        <td><span class="if-value if-high">38.80</span></td>
+                                        <td><span class="if-value if-high">48.80</span></td>
+                                        <td><span class="trend-arrow trend-up">↑</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            Nature Reviews Cancer
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">53.03</span></td>
+                                        <td><span class="if-value if-high">60.72</span></td>
+                                        <td><span class="if-value if-high">69.80</span></td>
+                                        <td><span class="if-value if-high">78.40</span></td>
+                                        <td><span class="if-value if-high">78.50</span></td>
+                                        <td><span class="trend-arrow trend-stable">→</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            Journal of Clinical Oncology
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">28.24</span></td>
+                                        <td><span class="if-value if-high">32.96</span></td>
+                                        <td><span class="if-value if-high">44.54</span></td>
+                                        <td><span class="if-value if-high">42.10</span></td>
+                                        <td><span class="if-value if-medium">42.10</span></td>
+                                        <td><span class="trend-arrow trend-stable">→</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            Annals of Internal Medicine
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">21.32</span></td>
+                                        <td><span class="if-value if-high">25.39</span></td>
+                                        <td><span class="if-value if-high">51.60</span></td>
+                                        <td><span class="if-value if-medium">39.20</span></td>
+                                        <td><span class="if-value if-medium">39.20</span></td>
+                                        <td><span class="trend-arrow trend-down">↓</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            Gut
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-high">17.94</span></td>
+                                        <td><span class="if-value if-high">19.82</span></td>
+                                        <td><span class="if-value if-medium">23.06</span></td>
+                                        <td><span class="if-value if-medium">24.50</span></td>
+                                        <td><span class="if-value if-medium">24.50</span></td>
+                                        <td><span class="trend-arrow trend-stable">→</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            Hepatology
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-medium">14.97</span></td>
+                                        <td><span class="if-value if-medium">17.43</span></td>
+                                        <td><span class="if-value if-medium">17.30</span></td>
+                                        <td><span class="if-value if-medium">13.50</span></td>
+                                        <td><span class="if-value if-medium">13.50</span></td>
+                                        <td><span class="trend-arrow trend-down">↓</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            Journal of Hepatology
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-medium">12.49</span></td>
+                                        <td><span class="if-value if-medium">15.84</span></td>
+                                        <td><span class="if-value if-medium">19.94</span></td>
+                                        <td><span class="if-value if-medium">25.70</span></td>
+                                        <td><span class="if-value if-medium">25.70</span></td>
+                                        <td><span class="trend-arrow trend-up">↑</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            Circulation
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-medium">18.88</span></td>
+                                        <td><span class="if-value if-medium">23.60</span></td>
+                                        <td><span class="if-value if-medium">30.84</span></td>
+                                        <td><span class="if-value if-medium">37.80</span></td>
+                                        <td><span class="if-value if-medium">37.80</span></td>
+                                        <td><span class="trend-arrow trend-up">↑</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                    <tr class="table-row">
+                                        <td>
+                                            European Heart Journal
+                                            <span class="journal-category category-q1">Q1</span>
+                                        </td>
+                                        <td><span class="if-value if-medium">16.62</span></td>
+                                        <td><span class="if-value if-medium">22.67</span></td>
+                                        <td><span class="if-value if-medium">35.85</span></td>
+                                        <td><span class="if-value if-medium">39.30</span></td>
+                                        <td><span class="if-value if-medium">39.30</span></td>
+                                        <td><span class="trend-arrow trend-up">↑</span></td>
+                                        <td><span class="if-value if-high">Q1</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 图例说明 -->
+                        <div class="table-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #e8f5e9;"></div>
+                                <span>高IF (>20)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #fff3e0;"></div>
+                                <span>中等IF (10-20)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #ffebee;"></div>
+                                <span>低IF (<10)</span>
+                            </div>
+                            <div class="legend-item">
+                                <i class="bi bi-arrow-up" style="color: #2e7d32;"></i>
+                                <span>上升趋势</span>
+                            </div>
+                            <div class="legend-item">
+                                <i class="bi bi-arrow-down" style="color: #c62828;"></i>
+                                <span>下降趋势</span>
+                            </div>
+                            <div class="legend-item">
+                                <i class="bi bi-arrow-right" style="color: #ef6c00;"></i>
+                                <span>稳定趋势</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -744,6 +1120,23 @@
             observer.observe(el);
         });
 
+        // 表格行动画
+        const tableRows = document.querySelectorAll('.table-row');
+        const tableObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                    tableObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        tableRows.forEach(row => {
+            tableObserver.observe(row);
+        });
+
         // 导航栏滚动效果
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
@@ -767,19 +1160,6 @@
                         block: 'start'
                     });
                 }
-            });
-        });
-
-        // 图表悬停效果
-        document.querySelectorAll('.bar').forEach(bar => {
-            bar.addEventListener('mouseenter', function() {
-                const value = this.getAttribute('title');
-                this.style.position = 'relative';
-                this.innerHTML = `<span style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: #333; color: white; padding: 2px 8px; border-radius: 3px; font-size: 12px;">${value}</span>`;
-            });
-            
-            bar.addEventListener('mouseleave', function() {
-                this.innerHTML = '';
             });
         });
     </script>
